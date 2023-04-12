@@ -27,7 +27,7 @@ export class InterleaveStrings {
         if(strings.every(value => value.length === strings.at(0)!.length)) return "none";
 
         strings.forEach(value => {
-            if(strings.length > longestStringLength) {
+            if(value.length > longestStringLength) {
                 longestString = value;
                 longestStringLength = value.length;
             }
