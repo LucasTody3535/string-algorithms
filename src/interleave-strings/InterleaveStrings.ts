@@ -85,5 +85,12 @@ export class InterleaveStrings {
 
         this.interleavedString = interleavedString.join("");
     }
+
+    /**
+     * Gets the interleaved string with any removed characters appended to the end
+     * @returns The interleaved string with any removed characters appended to the end
+     */
+    getInterleavedStringWithCharactersAppended() {
+        return this.interleavedString.concat(this.charsPopped);
     }
 }
