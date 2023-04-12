@@ -24,7 +24,7 @@ export class InterleaveStrings {
         if(strings.length < 2) throw new RangeError("Expected string list to have at least two strings");
 
         // Check if all the strings in the input array have the same length
-        if(!strings.every(value => value.length === strings.at(0)!.length)) return "none";
+        if(strings.every(value => value.length === strings.at(0)!.length)) return "none";
 
         strings.forEach(value => {
             if(strings.length > longestStringLength) {
