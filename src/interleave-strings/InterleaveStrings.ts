@@ -52,5 +52,38 @@ export class InterleaveStrings {
         this.charsPopped = charsPopped.join("");
         this.stringWithCharactersPopped = originalStringSplitted.join("");
     }
+
+    /**
+     * Interleaves two strings, removing characters from the longer string if necessary
+     * @param first The first string
+     * @param second The second string
+     */
+    generateStringInterleavingTwoStrings(first: string, second: string) {
+        let times = 0;
+        let longestString = this.getLongestStringFromASetOfStrings(first, second);
+        const interleavedString: Array<string> = [];
+        console.log(longestString)
+
+        if(longestString !== "none") {
+            if(longestString === first) {
+                this.popCharsUntilLengthMatches(longestString, second.length);
+                first = this.stringWithCharactersPopped;
+            }
+            else {
+                this.popCharsUntilLengthMatches(longestString, first.length);
+                second = this.stringWithCharactersPopped;
+            }
+        }
+
+        times = first.length;
+        console.log(times);
+
+        for(let i = 0; i < times; i++) {
+            interleavedString.push(first[i]);
+            interleavedString.push(second[i]);
+        }
+
+        this.interleavedString = interleavedString.join("");
+    }
     }
 }
