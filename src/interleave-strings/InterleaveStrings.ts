@@ -62,7 +62,6 @@ export class InterleaveStrings {
         let times = 0;
         let longestString = this.getLongestStringFromASetOfStrings(first, second);
         const interleavedString: Array<string> = [];
-        console.log(longestString)
 
         if(longestString !== "none") {
             if(longestString === first) {
@@ -76,7 +75,6 @@ export class InterleaveStrings {
         }
 
         times = first.length;
-        console.log(times);
 
         for(let i = 0; i < times; i++) {
             interleavedString.push(first[i]);
