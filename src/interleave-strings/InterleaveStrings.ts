@@ -4,5 +4,9 @@ export class InterleaveStrings {
     private interleavedString: string;
 
     constructor() {
+        this.charsPopped = "";
+        this.stringWithCharactersPopped = "";
+        this.interleavedString = "";
+    }
     }
 }
