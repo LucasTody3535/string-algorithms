@@ -27,4 +27,14 @@ describe("Interleave Strings Tests", () => {
 
         expect(stringInterleaver.getInterleavedStringWithCharactersAppended()).toBe(expected);
     });
+
+    it("Should interleave \"abcd\" with \"123\" resulting in \"a1b2c3d\"", () => {
+        const textOne = "abcd";
+        const textTwo = "123";
+        const expected = "a1b2c3d";
+
+        stringInterleaver.generateStringInterleavingTwoStrings(textOne, textTwo);
+
+        expect(stringInterleaver.getInterleavedStringWithCharactersAppended()).toBe(expected);
+    });
 });
